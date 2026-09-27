@@ -301,6 +301,23 @@ h3 {
   backdrop-filter: blur(12px);
 }
 
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member-list li {
+  color: rgb(255 255 255 / 87%);
+  font-size: 0.96rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
 .deadline {
   margin: 0 0 1.25rem;
   font-size: 1.15rem;
