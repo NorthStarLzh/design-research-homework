@@ -33,12 +33,12 @@ window.SITE_CONTENT = {
   checklist: {
     kicker: "提交前自检",
     title: "作业交付清单",
-    description: "网页内容已完成；提交前还需发布公开链接、添加真实的 AI 使用记录 PDF，并打包源文件。",
+    description: "网页已发布；提交前还需添加真实的 AI 使用记录 PDF，并打包源文件。",
     items: [
       {
         title: "可公开访问的网页链接",
-        description: "已包含三类总结、逻辑关系图、三篇典型论文、一篇分类争议论文及参考文献；待部署到 GitHub Pages 后复制公开链接。",
-        status: "内容已完成 · 待发布",
+        description: "已包含三类总结、逻辑关系图、三篇典型论文、一篇分类争议论文及参考文献；公开链接已发布，可直接提交。",
+        status: "已发布",
       },
       {
         title: "AI 使用与迭代记录 PDF",
