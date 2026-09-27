@@ -374,6 +374,24 @@ return `<li>${body}</li>`;
 .join("");
 };
 
+const renderTeamRoles = () => {
+const { teamRoles } = content;
+if (!teamRoles) return;
+setText("#team-roles-kicker", teamRoles.kicker);
+setText("#team-roles-title", teamRoles.title);
+setText("#team-roles-description", teamRoles.description);
+$("#team-role-grid").innerHTML = teamRoles.items
+.map(
+(item) => `
+<article class="role-card">
+<p class="role-members">${item.members.map(escapeHtml).join(" · ")}</p>
+<h3>${escapeHtml(item.title)}</h3>
+<p class="role-description">${escapeHtml(item.description)}</p>
+</article>`,
+)
+.join("");
+};
+
 const renderAiRecord = () => {
 const { aiRecord } = content;
 if (!aiRecord) return;
@@ -393,6 +411,7 @@ renderExamplePapers();
 renderControversialPaper();
 renderDiscussion();
 renderReferences();
+renderTeamRoles();
 renderAiRecord();
 };
 
