@@ -1,167 +1,180 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="梳理对设计、为设计与通过设计三种研究类型，呈现逻辑关系图、论文案例与分类讨论。"
-    />
-    <meta name="theme-color" content="#10251f" />
-    <title>设计研究的三条知识路径</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">跳至主要内容</a>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta
+name="description"
+content="梳理对设计、为设计与通过设计三种研究类型，呈现逻辑关系图、论文案例与分类讨论。"
+/>
+<meta name="theme-color" content="#10251f" />
+<title>设计研究的三条知识路径</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳至主要内容</a>
 
-    <header class="site-header" id="top">
-      <div class="shell header-inner">
-        <a class="brand" href="#top" aria-label="回到页面顶部">
-          <span class="brand-mark" aria-hidden="true">DR</span>
-          <span class="brand-name" id="brand-name">设计研究</span>
-        </a>
-        <nav class="site-nav" id="site-nav" aria-label="页面导航"></nav>
-      </div>
-    </header>
+<header class="site-header" id="top">
+<div class="shell header-inner">
+<a class="brand" href="#top" aria-label="回到页面顶部">
+<span class="brand-mark" aria-hidden="true">DR</span>
+<span class="brand-name" id="brand-name">设计研究</span>
+</a>
+<nav class="site-nav" id="site-nav" aria-label="页面导航"></nav>
+</div>
+</header>
 
-    <main id="main-content" tabindex="-1">
-      <section class="hero section-shell" aria-labelledby="site-title">
-        <div class="shell hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow" id="site-kicker"></p>
-            <h1 id="site-title">正在载入…</h1>
-            <p class="hero-lede" id="site-description"></p>
-            <div class="hero-actions" id="hero-actions"></div>
-          </div>
-          <aside class="hero-panel" aria-label="小组成员">
-            <p class="panel-label">小组成员</p>
-            <ul class="member-list" id="hero-members"></ul>
-          </aside>
-        </div>
-      </section>
+<main id="main-content" tabindex="-1">
+<section class="hero section-shell" aria-labelledby="site-title">
+<div class="shell hero-grid">
+<div class="hero-copy">
+<p class="eyebrow" id="site-kicker"></p>
+<h1 id="site-title">正在载入…</h1>
+<p class="hero-lede" id="site-description"></p>
+<div class="hero-actions" id="hero-actions"></div>
+</div>
+<aside class="hero-panel" aria-label="小组成员">
+<p class="panel-label">小组成员</p>
+<ul class="member-list" id="hero-members"></ul>
+</aside>
+</div>
+</section>
 
-      <section class="section-shell section-tint" id="research-types" aria-labelledby="research-types-title">
-        <div class="shell">
-          <div class="section-heading">
-            <p class="eyebrow" id="research-types-kicker"></p>
-            <h2 id="research-types-title"></h2>
-            <p class="section-intro" id="research-types-description"></p>
-          </div>
-          <div class="research-grid" id="research-type-grid"></div>
-        </div>
-      </section>
+<section class="section-shell section-tint" id="research-types" aria-labelledby="research-types-title">
+<div class="shell">
+<div class="section-heading">
+<p class="eyebrow" id="research-types-kicker"></p>
+<h2 id="research-types-title"></h2>
+<p class="section-intro" id="research-types-description"></p>
+</div>
+<div class="research-grid" id="research-type-grid"></div>
+</div>
+</section>
 
-      <section class="section-shell" id="logic-map" aria-labelledby="logic-map-title">
-        <div class="shell">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow" id="logic-map-kicker"></p>
-              <h2 id="logic-map-title"></h2>
-            </div>
-            <p class="section-intro" id="logic-map-description"></p>
-          </div>
+<section class="section-shell" id="logic-map" aria-labelledby="logic-map-title">
+<div class="shell">
+<div class="section-heading split-heading">
+<div>
+<p class="eyebrow" id="logic-map-kicker"></p>
+<h2 id="logic-map-title"></h2>
+</div>
+<p class="section-intro" id="logic-map-description"></p>
+</div>
 
-          <div class="diagram-shell">
-            <div class="diagram-toolbar">
-              <p id="diagram-help" class="diagram-help"></p>
-              <p class="diagram-status" id="diagram-status" aria-live="polite"></p>
-            </div>
-            <div
-              class="diagram-map"
-              id="diagram-map"
-              role="group"
-              aria-label="三种设计研究类型的逻辑关系图"
-              aria-describedby="diagram-help"
-            >
-              <svg
-                class="diagram-lines"
-                id="diagram-lines"
-                viewBox="0 0 1000 560"
-                preserveAspectRatio="none"
-                aria-hidden="true"
-              ></svg>
-              <div class="diagram-nodes" id="diagram-nodes"></div>
-            </div>
-            <aside class="diagram-detail" id="diagram-detail" aria-live="polite"></aside>
-            <figure class="source-figure" id="logic-map-source" hidden></figure>
-          </div>
-        </div>
-      </section>
+<div class="diagram-shell">
+<div class="diagram-toolbar">
+<p id="diagram-help" class="diagram-help"></p>
+<p class="diagram-status" id="diagram-status" aria-live="polite"></p>
+</div>
+<div
+class="diagram-map"
+id="diagram-map"
+role="group"
+aria-label="三种设计研究类型的逻辑关系图"
+aria-describedby="diagram-help"
+>
+<svg
+class="diagram-lines"
+id="diagram-lines"
+viewBox="0 0 1000 560"
+preserveAspectRatio="none"
+aria-hidden="true"
+></svg>
+<div class="diagram-nodes" id="diagram-nodes"></div>
+</div>
+<aside class="diagram-detail" id="diagram-detail" aria-live="polite"></aside>
+<figure class="source-figure" id="logic-map-source" hidden></figure>
+</div>
+</div>
+</section>
 
-      <section class="section-shell section-tint" id="visual-notes" aria-labelledby="visual-notes-title">
-        <div class="shell">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow" id="visual-notes-kicker"></p>
-              <h2 id="visual-notes-title"></h2>
-            </div>
-            <p class="section-intro" id="visual-notes-description"></p>
-          </div>
-          <div class="visual-notes-grid" id="visual-notes-grid"></div>
-        </div>
-      </section>
+<section class="section-shell section-tint" id="visual-notes" aria-labelledby="visual-notes-title">
+<div class="shell">
+<div class="section-heading split-heading">
+<div>
+<p class="eyebrow" id="visual-notes-kicker"></p>
+<h2 id="visual-notes-title"></h2>
+</div>
+<p class="section-intro" id="visual-notes-description"></p>
+</div>
+<div class="visual-notes-grid" id="visual-notes-grid"></div>
+</div>
+</section>
 
-      <section class="section-shell" id="example-papers" aria-labelledby="example-papers-title">
-        <div class="shell">
-          <div class="section-heading">
-            <p class="eyebrow" id="example-papers-kicker"></p>
-            <h2 id="example-papers-title"></h2>
-            <p class="section-intro" id="example-papers-description"></p>
-          </div>
-          <div class="paper-grid" id="example-paper-grid"></div>
-        </div>
-      </section>
+<section class="section-shell" id="example-papers" aria-labelledby="example-papers-title">
+<div class="shell">
+<div class="section-heading">
+<p class="eyebrow" id="example-papers-kicker"></p>
+<h2 id="example-papers-title"></h2>
+<p class="section-intro" id="example-papers-description"></p>
+</div>
+<div class="paper-grid" id="example-paper-grid"></div>
+</div>
+</section>
 
-      <section class="section-shell" id="controversial-paper" aria-labelledby="controversial-paper-title">
-        <div class="shell">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow" id="controversial-paper-kicker"></p>
-              <h2 id="controversial-paper-title"></h2>
-            </div>
-            <p class="section-intro" id="controversial-paper-description"></p>
-          </div>
-          <article class="controversy-card" id="controversy-card"></article>
-        </div>
-      </section>
+<section class="section-shell" id="controversial-paper" aria-labelledby="controversial-paper-title">
+<div class="shell">
+<div class="section-heading split-heading">
+<div>
+<p class="eyebrow" id="controversial-paper-kicker"></p>
+<h2 id="controversial-paper-title"></h2>
+</div>
+<p class="section-intro" id="controversial-paper-description"></p>
+</div>
+<article class="controversy-card" id="controversy-card"></article>
+</div>
+</section>
 
-      <section class="section-shell section-tint" id="classification-discussion" aria-labelledby="discussion-title">
-        <div class="shell">
-          <div class="section-heading">
-            <p class="eyebrow" id="discussion-kicker"></p>
-            <h2 id="discussion-title"></h2>
-            <p class="section-intro" id="discussion-description"></p>
-          </div>
-          <div class="discussion-grid" id="discussion-grid"></div>
-        </div>
-      </section>
+<section class="section-shell section-tint" id="classification-discussion" aria-labelledby="discussion-title">
+<div class="shell">
+<div class="section-heading">
+<p class="eyebrow" id="discussion-kicker"></p>
+<h2 id="discussion-title"></h2>
+<p class="section-intro" id="discussion-description"></p>
+</div>
+<div class="discussion-grid" id="discussion-grid"></div>
+</div>
+</section>
 
-      <section class="section-shell" id="references" aria-labelledby="references-title">
-        <div class="shell">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow" id="references-kicker"></p>
-              <h2 id="references-title"></h2>
-            </div>
-            <p class="section-intro" id="references-description"></p>
-          </div>
-          <ol class="reference-list" id="reference-list"></ol>
-        </div>
-      </section>
+<section class="section-shell" id="references" aria-labelledby="references-title">
+<div class="shell">
+<div class="section-heading split-heading">
+<div>
+<p class="eyebrow" id="references-kicker"></p>
+<h2 id="references-title"></h2>
+</div>
+<p class="section-intro" id="references-description"></p>
+</div>
+<ol class="reference-list" id="reference-list"></ol>
+</div>
+</section>
 
-    </main>
+<section class="section-shell section-tint" id="ai-record" aria-labelledby="ai-record-title">
+<div class="shell">
+<div class="section-heading split-heading">
+<div>
+<p class="eyebrow" id="ai-record-kicker"></p>
+<h2 id="ai-record-title"></h2>
+</div>
+<p class="section-intro" id="ai-record-description"></p>
+</div>
+<div class="documentation-card" id="ai-record-card"></div>
+</div>
+</section>
 
-    <footer class="site-footer">
-      <div class="shell footer-inner">
-        <p id="footer-note"></p>
-        <a href="#top">返回顶部 <span aria-hidden="true">↑</span></a>
-      </div>
-    </footer>
+</main>
 
-    <noscript>
-      <p class="noscript-message">请启用 JavaScript 后查看完整内容。</p>
-    </noscript>
-    <script src="content.js"></script>
-    <script src="script.js"></script>
-  </body>
+<footer class="site-footer">
+<div class="shell footer-inner">
+<p id="footer-note"></p>
+<a href="#top">返回顶部 <span aria-hidden="true">↑</span></a>
+</div>
+</footer>
+
+<noscript>
+<p class="noscript-message">请启用 JavaScript 后查看完整内容。</p>
+</noscript>
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
