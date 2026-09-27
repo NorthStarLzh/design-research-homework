@@ -994,6 +994,54 @@ text-underline-offset: 0.16em;
 color: var(--forest-2);
 }
 
+.role-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 1rem;
+}
+
+.role-card {
+position: relative;
+display: flex;
+min-height: 14rem;
+flex-direction: column;
+padding: 1.45rem;
+overflow: hidden;
+border: 1px solid var(--line);
+background: var(--paper);
+box-shadow: 0 8px 24px rgb(16 37 31 / 4%);
+}
+
+.role-card::before {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 0.28rem;
+background: var(--acid);
+content: "";
+}
+
+.role-members {
+margin: 0 0 1.15rem;
+color: var(--moss);
+font-size: 0.82rem;
+font-weight: 800;
+letter-spacing: 0.06em;
+}
+
+.role-card h3 {
+margin-bottom: 0.8rem;
+font-size: 1.3rem;
+}
+
+.role-description {
+margin: 0;
+margin-top: auto;
+color: var(--ink-soft);
+font-size: 0.93rem;
+}
+
 .record-section {
 color: var(--white);
 background:
@@ -1106,7 +1154,8 @@ margin-bottom: 2rem;
 
 .research-grid,
 .paper-grid,
-.discussion-grid {
+.discussion-grid,
+.role-grid {
 grid-template-columns: 1fr;
 }
 
