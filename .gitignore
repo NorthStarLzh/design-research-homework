@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+
+# 常见敏感本地配置：请勿提交到作业源文件包或公开仓库
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
