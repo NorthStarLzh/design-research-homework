@@ -1,57 +1,31 @@
 /*
  * 网站内容编辑入口
  *
- * 本页已依据“作业2/三种设计研究类型及逻辑关系图”中的 Markdown、PDF 与图片完成填充。
- * 后续只需在此文件修改姓名、课程信息、AI 使用记录 PDF 路径，或更新正文内容。
+ * 本页集中维护公开网页的文字、图片与链接。
  */
 
 window.SITE_CONTENT = {
   site: {
     title: "设计研究的三条知识路径",
     shortTitle: "设计研究",
-    kicker: "课程作业 · 类型、案例与分类讨论",
+    kicker: "设计研究 · 类型、案例与分类讨论",
     description:
       "以设计实践为中心，梳理“对设计”“为设计”与“通过设计”三种研究类型，呈现它们如何在解释、支持与探索之间持续生成知识。",
-    deadlineLabel: "作业截止时间",
-    deadline: "9 月 27 日（周日）23:59",
-    meta: ["设计研究课程作业", "姓名 / 学号：待填写", "基于 2026.09.25 与 2026.09.27 材料整理"],
+    members: ["林璟如", "胡咏琪", "刘子恒", "蔡诗彬", "王恺"],
     primaryAction: { label: "阅读三种类型", href: "#research-types" },
     secondaryAction: { label: "查看逻辑关系", href: "#logic-map" },
-    footerNote: "设计研究课程作业 · 当前内容与图像均来自已完成的作业材料",
+    footerNote: "设计研究的三条知识路径 · 林璟如、胡咏琪、刘子恒、蔡诗彬、王恺",
   },
 
   navigation: [
     { label: "三种类型", href: "#research-types" },
     { label: "逻辑关系", href: "#logic-map" },
-    { label: "材料图解", href: "#visual-notes" },
+    { label: "研究图解", href: "#visual-notes" },
     { label: "论文实例", href: "#example-papers" },
     { label: "争议论文", href: "#controversial-paper" },
     { label: "分类讨论", href: "#classification-discussion" },
     { label: "参考文献", href: "#references" },
   ],
-
-  checklist: {
-    kicker: "提交前自检",
-    title: "作业交付清单",
-    description: "网页已发布；提交前还需添加真实的 AI 使用记录 PDF，并打包源文件。",
-    items: [
-      {
-        title: "可公开访问的网页链接",
-        description: "已包含三类总结、逻辑关系图、三篇典型论文、一篇分类争议论文及参考文献；公开链接已发布，可直接提交。",
-        status: "已发布",
-      },
-      {
-        title: "AI 使用与迭代记录 PDF",
-        description: "请基于实际工作过程填写模板，导出 PDF 后放入 assets 文件夹，并在本页底部补上公开入口。",
-        status: "待上传",
-      },
-      {
-        title: "网页源文件压缩包",
-        description: "提交前压缩当前文件夹；保留网页、图片和说明文档，不要包含密钥、账号信息或其他敏感文件。",
-        status: "提交前打包",
-      },
-    ],
-  },
 
   researchTypes: {
     kicker: "01 · 类型框架",
@@ -100,8 +74,8 @@ window.SITE_CONTENT = {
   logicMap: {
     kicker: "02 · 关系图",
     title: "从现实问题到设计知识的循环",
-    description: "点击节点查看其在系统中的角色。图中以“设计实践”为中心：三种研究不必互斥，而是在不同知识目标下形成可相互反馈的关系。",
-    help: "键盘操作：按 Tab 聚焦节点，按 Enter 或空格查看详情；聚焦后可用方向键切换节点。",
+    description: "以“设计实践”为中心，三种研究在解释、支持与探索等不同知识目标下形成持续反馈。",
+    help: "选择节点，查看其在知识循环中的角色。",
     canvas: { width: 1000, height: 720 },
     rootId: "design-practice",
     nodes: [
@@ -160,15 +134,15 @@ window.SITE_CONTENT = {
     ],
     sourceFigure: {
       src: "assets/research-figures/logic-map-original.png",
-      alt: "课程材料中的三种设计研究类型逻辑关系图：现实问题进入设计实践，三类研究围绕设计实践产生理论、工具与新知识并形成反馈。",
-      caption: "材料原图。上方为便于网页阅读与交互而重绘的版本。",
+      alt: "三种设计研究类型逻辑关系图：现实问题进入设计实践，三类研究围绕设计实践产生理论、工具与新知识并形成反馈。",
+      caption: "三种设计研究围绕设计实践形成的整体关系。",
     },
   },
 
   visualNotes: {
-    kicker: "材料图解",
+    kicker: "研究图解",
     title: "目的、角色与知识贡献的视觉笔记",
-    description: "以下九张图由作业材料提供，按“研究目的—设计角色—知识贡献”编排。图片按需加载，可展开查看。",
+    description: "从研究目的、设计角色与知识贡献三个维度比较三种设计研究取向。",
     groups: [
       {
         title: "对设计的研究",
@@ -203,7 +177,7 @@ window.SITE_CONTENT = {
   examplePapers: {
     kicker: "03 · 论文实例",
     title: "三篇典型论文：从理解到支持，再到探索",
-    description: "每篇论文对应一种以设计实践为中心的知识生产路径。案例分析默认展开，可按需要收起。",
+    description: "三项案例分别展示设计研究如何从理解、支持与探索中生成知识。",
     items: [
       {
         type: "对设计的研究 · Into",
@@ -211,11 +185,10 @@ window.SITE_CONTENT = {
         citation: "Baigelenov, A., Shukla, P., & Parsons, P. (2025). How Visualization Designers Perceive and Use Inspiration. Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, 1–13. DOI: 10.1145/3706598.3714191.",
         relevance: "以专业数据可视化从业者的灵感认知、搜寻与使用为研究对象，通过访谈与主题分析解释设计实践中灵感、模仿、所有权和职业身份之间的关系。",
         url: "https://doi.org/10.1145/3706598.3714191",
-        origin: "新增作业材料 · 1into和4分类争议.md",
         figure: {
           src: "assets/research-figures/into-case-method.png",
           alt: "研究流程图：招募14名数据可视化从业者，开展远程半结构式访谈，并以混合主题分析从88个代码和8个主题收敛为56个代码和4个主题。",
-          caption: "研究方法流程图 · 新增作业材料",
+          caption: "研究方法流程图",
           width: 2794,
           height: 777,
         },
@@ -234,7 +207,6 @@ window.SITE_CONTENT = {
         citation: "O'Donovan, P., Agarwala, A., & Hertzmann, A. (2015). CHI '15, 1221–1224. DOI: 10.1145/2702123.2702149.",
         relevance: "将对齐、比例、位置等平面设计知识计算化，开发交互式布局建议工具，并用实际设计结果检验其对初学者的帮助。",
         url: "https://doi.org/10.1145/2702123.2702149",
-        origin: "作业材料 · for设计_through设计.md",
         analysis: [
           { label: "研究问题", value: "如何通过自动布局分析和交互建议，降低初学者在平面布局探索、优化和方案比较中的门槛？" },
           { label: "研究方法", value: "将位置、比例、对齐、间距与重叠等原则表示为优化问题；实现建议式与自适应式界面，并以用户实验比较设计结果。" },
@@ -249,7 +221,6 @@ window.SITE_CONTENT = {
         citation: "Gaver, W. W., Schmidt, A., Bowers, J., et al. (2004). CHI EA '04, 885–900. DOI: 10.1145/985921.985947.",
         relevance: "以 Drift Table 的设计、制作、家庭部署、观察与反思作为知识生成过程，让关于 ludic engagement 的理解随实践不断修正。",
         url: "https://doi.org/10.1145/985921.985947",
-        origin: "作业材料 · for设计_through设计.md",
         analysis: [
           { label: "研究问题", value: "家庭交互技术如何支持由好奇、探索与反思驱动的 ludic activity；这一设计思想会怎样在真实使用中被重新理解？" },
           { label: "研究方法", value: "设计并制作以重量分布控制航空影像移动的 Drift Table，部署到志愿者家庭数周，通过观察、访谈和反馈持续反思。" },
@@ -279,7 +250,7 @@ window.SITE_CONTENT = {
     figure: {
       src: "assets/research-figures/boundary-case-method.png",
       alt: "研究方法与证据链图：跨领域文献和视频创作实践分析经由“识别—设计—聚合—嵌入 AI”四步方法发展 VideOrigami，再通过10名参与者的两阶段研究进行评估。",
-      caption: "研究方法与证据链 · 新增作业材料",
+      caption: "研究方法与证据链",
       width: 2565,
       height: 814,
     },
@@ -317,7 +288,7 @@ window.SITE_CONTENT = {
   references: {
     kicker: "06 · 参考文献",
     title: "参考文献",
-    description: "三类框架、三篇典型论文与分类争议论文的核心来源。点击条目可打开相应 DOI 或文献页。",
+    description: "三类框架、论文案例与分类讨论的主要来源。",
     items: [
       {
         text: "Frayling, C. (1993/4). Research in Art and Design. Royal College of Art Research Papers, 1(1), 1–5.",
@@ -340,15 +311,5 @@ window.SITE_CONTENT = {
         url: "https://doi.org/10.1145/3706598.3713401",
       },
     ],
-  },
-
-  aiRecord: {
-    kicker: "附件 · AI 使用与迭代记录",
-    title: "AI 使用与迭代记录",
-    description: "请只记录实际发生过的 AI 协作、核验与修改。填写模板后导出 PDF，放入 assets 文件夹并在这里补充链接。",
-    status: "PDF 待补充",
-    fileHint: "模板：AI使用与迭代记录模板.md；建议导出路径：assets/ai-iteration-record.pdf",
-    url: "",
-    linkLabel: "打开 AI 使用与迭代记录 PDF",
   },
 };
