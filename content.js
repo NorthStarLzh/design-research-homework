@@ -25,6 +25,7 @@ navigation: [
 { label: "争议论文", href: "#controversial-paper" },
 { label: "分类讨论", href: "#classification-discussion" },
 { label: "参考文献", href: "#references" },
+{ label: "小组分工", href: "#team-roles" },
 { label: "AI 使用记录", href: "#ai-record" },
 ],
 
@@ -314,8 +315,31 @@ url: "https://doi.org/10.1145/3706598.3713401",
 ],
 },
 
+teamRoles: {
+kicker: "07 · 小组协作",
+title: "小组成员分工",
+description: "研究内容、网页呈现与公开发布由小组成员协同完成。",
+items: [
+{
+members: ["胡咏琪", "王恺"],
+title: "三种研究类型与逻辑关系图",
+description: "负责三种设计研究类型与逻辑关系图的网页设计、文字整理及图像素材。",
+},
+{
+members: ["林璟如", "蔡诗彬"],
+title: "研究实例、分类争议与参考文献",
+description: "负责三篇典型研究实例、一篇分类争议实例及参考文献的网页设计、文字整理及图像素材。",
+},
+{
+members: ["刘子恒"],
+title: "AI 辅助代码实现与公网部署",
+description: "负责 AI 辅助网页代码实现、页面整合与公开网页部署。",
+},
+],
+},
+
 aiRecord: {
-kicker: "07 · AI 使用说明",
+kicker: "08 · AI 使用说明",
 title: "AI 使用与迭代记录",
 description: "小组在网页构建、材料整理与发布过程中的 AI 使用记录。",
 action: {
