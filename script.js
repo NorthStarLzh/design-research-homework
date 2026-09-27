@@ -14,7 +14,7 @@
 
   if (!content) {
     document.body.innerHTML =
-      '<p class="load-error">未找到 content.js。请确认 content.js 与 index.html 位于同一文件夹。</p>';
+      '<p class="load-error">页面内容加载失败，请刷新后重试。</p>';
     return;
   }
 
@@ -64,7 +64,7 @@
         <img src="${escapeHtml(figure.src)}" alt="${escapeHtml(figure.alt || "")}"${sizeAttributes} loading="lazy" decoding="async" />
         <figcaption>
           ${figure.caption ? `<span>${escapeHtml(figure.caption)}</span>` : ""}
-          <a class="figure-link" href="${escapeHtml(figure.src)}" target="_blank" rel="noreferrer" aria-label="在新标签页查看${escapeHtml(figureName)}的原尺寸图">查看原尺寸图</a>
+          <a class="figure-link" href="${escapeHtml(figure.src)}" target="_blank" rel="noreferrer" aria-label="在新标签页查看${escapeHtml(figureName)}的原图">查看原图</a>
         </figcaption>
       </figure>`;
   };
@@ -86,36 +86,14 @@
     setText("#site-kicker", site.kicker);
     setText("#site-title", site.title);
     setText("#site-description", site.description);
-    setText("#deadline-label", site.deadlineLabel);
-    setText("#deadline-value", site.deadline);
     setText("#footer-note", site.footerNote);
-    $("#hero-meta").innerHTML = site.meta
-      .map((item) => `<span>${escapeHtml(item)}</span>`)
+    $("#hero-members").innerHTML = (site.members || [])
+      .map((member) => `<li>${escapeHtml(member)}</li>`)
       .join("");
     $("#hero-actions").innerHTML = [
       createLink(site.primaryAction, "button button-primary"),
       createLink(site.secondaryAction, "button button-quiet"),
     ].join("");
-  };
-
-  const renderChecklist = () => {
-    const { checklist } = content;
-    setText("#requirements-kicker", checklist.kicker);
-    setText("#requirements-title", checklist.title);
-    setText("#requirements-description", checklist.description);
-    $("#checklist").innerHTML = checklist.items
-      .map(
-        (item, index) => `
-          <li class="checklist-item">
-            <span class="check-number" aria-hidden="true">0${index + 1}</span>
-            <div>
-              <h3>${escapeHtml(item.title)}</h3>
-              <p>${escapeHtml(item.description)}</p>
-            </div>
-            <span class="status-pill">${escapeHtml(item.status)}</span>
-          </li>`,
-      )
-      .join("");
   };
 
   const renderResearchTypes = () => {
@@ -301,7 +279,7 @@
               },
               "text-link",
             )
-          : '<span class="placeholder-link">[待填写：论文链接]</span>';
+          : "";
         const analysis = (paper.analysis || [])
           .map(
             (item) =>
@@ -317,7 +295,7 @@
             <p>${escapeHtml(paper.relevance)}</p>
             ${paperFigure}
             ${paper.origin ? `<p class="paper-origin">${escapeHtml(paper.origin)}</p>` : ""}
-            ${analysis ? `<details class="paper-details" open><summary>案例分析（点击收起或展开）</summary><dl class="paper-analysis">${analysis}</dl></details>` : ""}
+            ${analysis ? `<details class="paper-details" open><summary>案例分析</summary><dl class="paper-analysis">${analysis}</dl></details>` : ""}
             ${paperLink}
           </article>`;
       })
@@ -394,24 +372,9 @@
       .join("");
   };
 
-  const renderAiRecord = () => {
-    const { aiRecord } = content;
-    setText("#ai-record-kicker", aiRecord.kicker);
-    setText("#ai-record-title", aiRecord.title);
-    setText("#ai-record-description", aiRecord.description);
-    const link = aiRecord.url
-      ? createLink({ label: aiRecord.linkLabel, href: aiRecord.url }, "button button-light")
-      : '<span class="record-unavailable">上传 PDF 后，此处会显示公开访问入口</span>';
-    $("#record-card").innerHTML = `
-      <span class="status-pill status-pill-light">${escapeHtml(aiRecord.status)}</span>
-      <p>${escapeHtml(aiRecord.fileHint)}</p>
-      ${link}`;
-  };
-
   const init = () => {
     renderNavigation();
     renderHero();
-    renderChecklist();
     renderResearchTypes();
     renderDiagram();
     renderVisualNotes();
@@ -419,7 +382,6 @@
     renderControversialPaper();
     renderDiscussion();
     renderReferences();
-    renderAiRecord();
   };
 
   init();
